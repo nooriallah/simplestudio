@@ -1,0 +1,74 @@
+/* Tailwind CSS Utilities File */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+/* local font-satoshi = 'Satoshi', sans-serif; */
+@font-face {
+    font-family: 'Guton';
+    src: url('/public/frontend/font/Guton-Bold.otf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Guton';
+    src: url('/public/frontend/font/Guton-ExtraBold.otf') format('truetype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Guton';
+    src: url('/public/frontend/font/Guton-Medium.otf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Guton";
+    src: url('/public/frontend/font/Guton-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Guton";
+    src: url('/public/frontend/font/Guton-SemiBold.otf') format('truetype');
+    font-weight: 600;
+}
+
+@layer base {
+    html {
+        font-family: 'Satoshi', sans-serif;
+    }
+}
+
+/* Custome deisgns */
+@layer base {
+    body {
+        font-family: theme("fontFamily.satoshi");
+    }
+    p {
+        @apply text-base text-secondary-500 font-satoshi;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-guton;
+    }
+
+    a {
+        @apply text-secondary-500 text-link-1 font-guton transition;
+    }
+}
+
+@layer components {
+    .button {
+        @apply px-[36px] py-[14px] bg-secondary-default text-white rounded-[62px] hover:bg-secondary-700 transition content-center flex-row gap-3;
+    }
+    .content-center {
+        @apply flex flex-col items-center text-center;
+    }
+    .menu-link {
+        @apply text-secondary-500 font-medium text-link-2 transition;
+    }
+}
