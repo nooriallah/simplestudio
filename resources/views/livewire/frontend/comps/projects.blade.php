@@ -18,28 +18,35 @@
 
 
 
-            <div class="flex gap-10">
-                <div
-                    class="w-30 h-[700px] bg-[url({{ asset('frontend/images/projects/smallpic.png') }})] rounded-[24px] overflow-hidden">
-                    <img src="{{ asset('frontend/images/projects/smallpic.png') }}" alt="" srcset="">
+            <div class="project__wrapper flex gap-10">
+                <div class="small__project">
+                    {{-- <img src="{{ asset('frontend/images/projects/smallpic.png') }}" alt="" srcset=""> --}}
                 </div>
-                <div
-                    class="w-auto h-[700px] bg-[url({{ asset('frontend/images/projects/bigpic.png') }})] rounded-[24px] overflow-hidden">
-                    <img src="{{ asset('frontend/images/projects/bigpic.png') }}" alt="" srcset="">
+                <div class="big__project">
+                    {{-- <img src="{{ asset('frontend/images/projects/bigpic.png') }}" alt="" srcset=""> --}}
                 </div>
             </div>
 
-            <div class="flex gap-10">
-                <div
-                    class="w-30 h-[700px] bg-[url({{ asset('frontend/images/projects/bigpic.png') }})] rounded-[24px] overflow-hidden">
-                    <img src="{{ asset('frontend/images/projects/bigpic.png') }}" alt="" srcset="">
-                </div>
 
-                <div
-                    class="w-70 h-[700px] bg-[url({{ asset('frontend/images/projects/smallpic.png') }})] rounded-[24px] overflow-hidden">
-                    <img src="{{ asset('frontend/images/projects/smallpic.png') }}" alt="" srcset="">
+            <div class="project__wrapper flex gap-10">
+                <div class="big__project">
+                    {{-- <img src="{{ asset('frontend/images/projects/bigpic.png') }}" alt="" srcset=""> --}}
+                </div>
+                <div class="small__project">
+                    {{-- <img src="{{ asset('frontend/images/projects/smallpic.png') }}" alt="" srcset=""> --}}
                 </div>
             </div>
+
+
+            <div class="project__wrapper flex gap-10">
+                <div class="small__project">
+                    {{-- <img src="{{ asset('frontend/images/projects/smallpic.png') }}" alt="" srcset=""> --}}
+                </div>
+                <div class="big__project">
+                    {{-- <img src="{{ asset('frontend/images/projects/bigpic.png') }}" alt="" srcset=""> --}}
+                </div>
+            </div>
+
 
 
         </div>

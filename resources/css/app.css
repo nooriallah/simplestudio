@@ -8,6 +8,59 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('../../public/frontend/images/hero-bg.png') no-repeat center center;
+    background: url("../../public/frontend/images/hero-bg.png") no-repeat center
+        center;
     background-size: cover;
+}
+
+/* Projects section design */
+.project__container {
+    .project__wrapper {
+        flex-direction: row;
+
+        .small__project,
+        .big__project {
+            height: 700px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: flex-basis 0.5s ease-in-out;
+        }
+
+        .small__project {
+            flex-basis: 30%;
+            background: url("../../public/frontend/images/projects/smallpic.png")
+                no-repeat center/cover;
+            &:hover {
+                flex-basis: 70%;
+                & ~ .big__project {
+                    flex-basis: 30%;
+                }
+            }
+            &:last-child:hover {
+                flex-basis: 70%;
+                & + .big__project {
+                    flex-basis: 30%;
+                }
+            }
+        }
+        .big__project {
+            flex-basis: 70%;
+            background: url("../../public/frontend/images/projects/bigpic.png")
+                no-repeat center/cover;
+
+            &:hover {
+                flex-basis: 70%;
+                & ~ .small__project {
+                    flex-basis: 30%;
+                }
+            }
+
+            &:first-child:hover {
+                flex-basis: 70%;
+                & + .small__project {
+                    flex-basis: 30%;
+                }
+            }
+        }
+    }
 }
