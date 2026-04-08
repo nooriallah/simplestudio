@@ -21,17 +21,20 @@
     {{-- Header of website --}}
     @include('layouts.header')
 
+    <main>
+        {{ $slot }}
+    </main>
 
 
-
-    {{ $slot }}
-
+    {{-- Footer of website --}}
+    @include('layouts.footer')
 
 
     @livewireScripts
 </body>
 
 <script>
+    // Projects section design
     document.querySelectorAll('.project__wrapper').forEach(wrapper => {
         const projects = wrapper.querySelectorAll('.small__project, .big__project');
 

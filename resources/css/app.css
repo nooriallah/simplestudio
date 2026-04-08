@@ -24,43 +24,50 @@
             border-radius: 25px;
             cursor: pointer;
             transition: flex-basis 0.5s ease-in-out;
+            overflow: hidden;
+
+            .project_hidden_info {
+                position: absolute;
+                bottom: -60px;
+                left: 50px;
+                transition: bottom .5s ease-in-out;
+
+                .titled_button {
+                    background: linear-gradient(
+                        90deg,
+                        rgba(245, 245, 245, 0.4) 0%,
+                        rgba(245, 245, 245, 0.6) 50%,
+                        rgba(245, 245, 245, 0.2) 100%
+                    );
+                }
+            }
+
+            &:hover .project_hidden_info {
+                bottom: 50px;
+            }
         }
 
         .small__project {
             flex-basis: 30%;
             background: url("../../public/frontend/images/projects/smallpic.png")
                 no-repeat center/cover;
-            &:hover {
-                flex-basis: 70%;
-                & ~ .big__project {
-                    flex-basis: 30%;
-                }
-            }
-            &:last-child:hover {
-                flex-basis: 70%;
-                & + .big__project {
-                    flex-basis: 30%;
-                }
-            }
         }
+
         .big__project {
             flex-basis: 70%;
             background: url("../../public/frontend/images/projects/bigpic.png")
                 no-repeat center/cover;
-
-            &:hover {
-                flex-basis: 70%;
-                & ~ .small__project {
-                    flex-basis: 30%;
-                }
-            }
-
-            &:first-child:hover {
-                flex-basis: 70%;
-                & + .small__project {
-                    flex-basis: 30%;
-                }
-            }
         }
+
+        
+    }
+}
+
+/* Footer style */
+footer {
+    /* background: url("../../public/frontend/images/Layer_1.svg") top left no-repeat; */
+
+    .footer_right {
+        width: 750px;
     }
 }

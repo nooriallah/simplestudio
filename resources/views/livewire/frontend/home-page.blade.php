@@ -9,7 +9,11 @@
     @include('frontend.comps.clients')
 
 
+    {{-- Projects section --}}
     @include("frontend.comps.projects")
+
+    {{-- Services section --}}
+    @include("frontend.comps.services")
 
 
 </div>
