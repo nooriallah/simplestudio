@@ -30,7 +30,7 @@
                 position: absolute;
                 bottom: -60px;
                 left: 50px;
-                transition: bottom .5s ease-in-out;
+                transition: bottom 0.5s ease-in-out;
 
                 .titled_button {
                     background: linear-gradient(
@@ -58,15 +58,99 @@
             background: url("../../public/frontend/images/projects/bigpic.png")
                 no-repeat center/cover;
         }
-
-        
     }
+}
+
+/* Service section homepage */
+.services {
+    .services_wrapper {
+        &:hover .single_service:nth-child(3) {
+            width: 180px;
+
+            .cover_overlay {
+                display: block;
+            }
+        }
+        /* // When ANY child is hovered, force the 3rd child to shrink */
+        &:has(.single_service:hover) {
+            .single_service:nth-child(3) {
+                width: 180px;
+                .cover_overlay {
+                    display: block;
+                }
+            }
+        }
+
+        .single_service {
+            width: 180px;
+            height: 680px;
+            transition: all linear 0.3s;
+
+            /* // Default state for the 3rd child */
+            &:nth-child(3) {
+                width: 600px;
+                .cover_overlay {
+                    display: none;
+                }
+            }
+
+            /* // Hover state for any child */
+            &:hover {
+                width: 600px !important; /*  // Forces it to expand */
+                .cover_overlay {
+                    display: none !important;
+                }
+            }
+        }
+    }
+
+    /* Mobile version */
+    @media (max-width: 600px) {
+        .services_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .single_service {
+                width: auto;
+                height: auto;
+                height: 400px;
+                transition: all ease 0.3s;
+                position: relative;
+
+                .cover_overlay {
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+/* Projects page styles */
+.projects_hero {
+    .filter_buttons {
+        gap: 12px;
+        margin: 35px auto 62px auto;
+
+        button {
+            padding: 11px 36px;
+            /* Tertiary/T. 50 */
+            &:hover {
+                background-color: #f5f5f7;
+                border-radius: 130px;
+            }
+        }
+    }
+}
+.project_card_wrapper {
+    margin-bottom: 77px;
 }
 
 /* Footer style */
 footer {
     /* background: url("../../public/frontend/images/Layer_1.svg") top left no-repeat; */
-
+    
     .footer_right {
         width: 750px;
     }

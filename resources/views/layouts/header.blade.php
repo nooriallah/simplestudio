@@ -1,4 +1,7 @@
-<header class="h-[150px] flex items-center">
+@php
+    $isDarkPage = request()->routeIs("project")
+@endphp
+<header class="h-[150px] flex items-center {{ $isDarkPage ? 'bg-secondary-500' : 'bg-blend-lighten' }}">
     <div class="container m-auto">
         <div
             class="header_wrapper flex justify-between items-center sm:flex-col md:flex-row text-secondary-500 hover:text-secondary-700 font-bold">
@@ -14,7 +17,7 @@
 
                 <div class="menu">
                     <ul class="flex sm:flex-col md:flex-row md:gap-[50px]">
-                        <li><a href="{{ url('/projects') }}" class="menu-link">Projects</a></li>
+                        <li><a href="{{ route("projects")}}" class="menu-link">Projects</a></li>
                         <li><a href="{{ url('/services') }}" class="menu-link">Services</a></li>
                     </ul>
                 </div>
