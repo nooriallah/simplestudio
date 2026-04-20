@@ -17,7 +17,8 @@
 
 <body>
     {{-- Header of website --}}
-    @include('layouts.header')
+    {{-- @include('layouts.front.header') --}}
+    <x-layouts::front.header />
 
 
     <main>
@@ -25,7 +26,8 @@
     </main>
 
     {{-- Footer of website --}}
-    @include('layouts.footer')
+    {{-- @include('layouts.front.footer') --}}
+    <x-layouts::front.footer />
     
 
     @livewireScripts

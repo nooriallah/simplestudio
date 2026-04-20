@@ -3,17 +3,17 @@
 
 
     {{-- Hero section --}}
-    @include('frontend.comps.hero')
+    @include('components.frontend.home.hero')
 
     {{-- Clients section  --}}
-    @include('frontend.comps.clients')
+    @include('components.frontend.home.clients')
 
 
     {{-- Projects section --}}
-    @include("frontend.comps.projects")
+    @include("components.frontend.home.projects")
 
     {{-- Services section --}}
-    @include("frontend.comps.services")
+    @include("components.frontend.home.services")
 
 
 </div>
