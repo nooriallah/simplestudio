@@ -16,7 +16,7 @@
 
 
     <section class="project_card_wrapper container">
-        @include("frontend.comps.project-card")
+        @include("frontend.home.projects")
     </section>
 
 

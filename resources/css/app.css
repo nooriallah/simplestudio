@@ -1,6 +1,8 @@
 /* resources/css/app.css */
 @import url("utilities.css");
 
+
+
 .hero__container {
     min-height: 80vh;
     display: flex;
@@ -147,10 +149,29 @@
     margin-bottom: 77px;
 }
 
+/* About page style */
+.about_page {
+    z-index: 10;
+    .top_overlay {
+        z-index: 0;
+        height: 468.55px;
+
+        background: linear-gradient(
+            180deg,
+            #d8f2fc 0%,
+            rgba(245, 245, 247, 0) 100%
+        );
+    }
+
+    .container {
+        z-index: 10;
+    }
+}
+
 /* Footer style */
 footer {
     /* background: url("../../public/frontend/images/Layer_1.svg") top left no-repeat; */
-    
+
     .footer_right {
         width: 750px;
     }

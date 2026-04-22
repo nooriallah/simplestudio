@@ -1,7 +1,7 @@
 @php
     $isDarkPage = request()->routeIs("project")
 @endphp
-<header class="h-[150px] flex items-center {{ $isDarkPage ? 'bg-secondary-500' : 'bg-blend-lighten' }}">
+<header class="h-[150px] flex items-center relative z-10 {{ $isDarkPage ? 'bg-secondary-500' : 'bg-blend-lighten' }}">
     <div class="container m-auto">
         <div
             class="header_wrapper flex justify-between items-center sm:flex-col md:flex-row text-secondary-500 hover:text-secondary-700 font-bold">
