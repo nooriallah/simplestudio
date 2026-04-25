@@ -1,5 +1,6 @@
 <section class="about_page">
 
+
     <div class="top_overlay absolute top-0 left-0 right-0"></div>
 
     <div class="container relative z-10">
@@ -63,16 +64,35 @@
 
 
     {{-- Why section --}}
-    <div class="container-fluid bg-secondary-500 text-white py-32">
-        
+    <div class="why_simple container-fluid bg-secondary-500 text-white py-32">
+
         <div class="container">
 
-            <h2 class="text-h2 text-white">Why Simple</h2>
+            <h2 class="text-h2 text-white mb-12">Why Simple</h2>
 
             <ul>
-                <li class="flex items-center justify-between">
-                    <span>Expertise of our co-founders</span> <img src="{{ asset("frontend/images/faqicon.svg") }}" alt="">
-                </li>
+
+                @foreach ($features as $feature)
+                    <li class="why_card">
+                        <div class="title_portion flex items-center justify-between">
+                            <span class="text-h3 mb-3">{{ $feature['title'] }}</span>
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M35.625 21.172L25 32L14.375 21.172L16.2609 19.25L25 28.1561L33.7391 19.25L35.625 21.172Z"
+                                    fill="#747782" />
+                                <circle cx="25" cy="25" r="24.5" stroke="#D9D9D9" />
+                            </svg>
+
+                        </div>
+                        <div class="desc_portion">
+                            <p class="max-w-[520px] text-white">{{ $feature['desc'] }}</p>
+                        </div>
+
+                    </li>
+                @endforeach
+
+
             </ul>
 
 
@@ -80,5 +100,52 @@
 
     </div>
 
+
+
+    {{-- Testimonial section --}}
+
+    <div class="testimonials container-fluid py-20">
+
+        <div class="container">
+
+            <h2 class="text-h2 secondary-500 mb-6">What our clients says about us</h2>
+
+            <div class="cards_wrapper flex gap-8">
+
+                {{-- single card --}}
+                <div class="card bg-tertiary-50 p-8 rounded-2xl relative z-0 overflow-hidden @container">
+                    <div class="top_info flex gap-3 mb-10 @max-[194px]:flex-col">
+                        <img src="{{ asset('frontend/images/about/clientpic.png') }}" alt="">
+                        <p class="text-p4">Matiullah Rahmaty <br> CEO, Tamveel</p>
+                    </div>
+
+                    <div class="quote">
+                        <p class="text-p1">“Simple functioned as part of our team, helping to crystalize our vision and
+                            delivering incredible results in a record time.”</p>
+                    </div>
+
+                    <img src="{{ asset('frontend/images/about/testipic.svg') }}" alt=""
+                        class="overlay_pic absolute right-0 bottom-0 z-10">
+
+
+
+                    <svg class="absolute bottom-3 right-3" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24.7508" cy="24.7508" r="24.1883" fill="white" stroke="#D1D5DB"
+                            stroke-width="1.12504" />
+                        <path d="M24.8856 18.915H21.6005V17.4525H26.4382V33.563H24.8856V18.915Z" fill="black" />
+                    </svg>
+
+
+                </div>
+
+               
+
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>

@@ -162,10 +162,57 @@
             rgba(245, 245, 247, 0) 100%
         );
     }
+    
 
-    .container {
-        z-index: 10;
+    .why_simple {
+
+        .why_card {
+            border-bottom: 1px solid gray;
+            padding-bottom: 32px;
+            margin-bottom: 40px;
+            cursor: pointer;
+            
+            .desc_portion {
+                height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease-in-out;
+                
+            }
+            
+            &:hover .desc_portion {
+                height: 45px;
+            }
+            
+            svg {
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover svg {
+                transform: rotate(-180deg); 
+            }
+
+            &:hover svg path {
+                fill: #F5F5F7;
+            }
+
+        }
     }
+
+
+    /* testimonials */
+    .testimonials {
+
+        .cards_wrapper {
+
+            .card {
+                max-width: 194px;
+
+               
+                
+            }
+        }
+    }
+
+   
 }
 
 /* Footer style */

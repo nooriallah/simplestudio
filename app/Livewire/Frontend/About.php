@@ -14,30 +14,26 @@ class About extends Component
         ['label' => 'Team Members', 'target' => 10],
     ];
 
-    public $title = "Why Simple";
-    public $subtitle = "Expertise of our co-founders";
-    public $description = "Led By Experienced Co-Founders With Master's Degrees And 8+ Years Of Experience In Design And Visual Communication.";
-    
     public $features = [
         [
             'title' => 'Modern and creative services',
-            'icon' => '🎨'
+            'desc' => "Led by experienced co-founders with master\'s degrees and 8+ years of experience in design and visual communication."
         ],
         [
             'title' => 'Timeless design solutions',
-            'icon' => '⏰'
+            'desc' => "Led by experienced co-founders with master\'s degrees and 8+ years of experience in design and visual communication."
         ],
         [
             'title' => 'A diverse and Skilled team',
-            'icon' => '👥'
+            'desc' => "Led by experienced co-founders with master\'s degrees and 8+ years of experience in design and visual communication."
         ],
         [
             'title' => 'Outcome-focused capacity building programs',
-            'icon' => '📈'
+            'desc' => "Led by experienced co-founders with master\'s degrees and 8+ years of experience in design and visual communication."
         ],
         [
             'title' => 'Leading creative agencies partners globally',
-            'icon' => '🌍'
+            'desc' => "Led by experienced co-founders with master\'s degrees and 8+ years of experience in design and visual communication."
         ]
     ];
     public function render()
