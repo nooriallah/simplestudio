@@ -15,51 +15,56 @@
 
     <div class="container">
 
-        <div class="flex justify-between">
+        <div class="flex justify-between gap-12 mb-[160px]">
 
-            <div class="col">
+            <div class="w-1/2">
                 <h1 class="text-h1 text-secondary-500">Let's Create</h1>
-                <p class="text-p2 mb-14">We'd love to get to know you better and explore what we can design and build together.
+                <p class="text-p2 mb-14 max-w-[480px]">We'd love to get to know you better and explore what we can design and build together.
                 </p>
 
 
-                <form>
-                    <div class="flex border gap-5">
-                        <div class="flex flex-col flex-1 border">
-                            <label for="name" class="text-muted">Your Name</label>
-                            <input type="text" name="name" id="name" placeholder="Your Name" class  />
-                        </div>
-                        <div class="flex flex-col border flex-1">
-                            <label for="email">Your Name</label>
-                            <input type="email" name="email" id="email" placeholder="Your Email" />
-                        </div>
+                <form class="flex flex-col gap-7" wire:submit.prevent="submit">
+                    <div class="flex gap-6">
+                        <x-layouts::front.form-field label="Name" name="name" type="text" placeholder="Your Name" />
+                        <x-layouts::front.form-field label="Email" name="email" type="email" placeholder="Your Email" />
                     </div>
-                    <div class="flex">
-                        <div class="flex flex-col">
-                            <label for="name">Your Name</label>
-                            <input type="text" name="name" id="name" placeholder="Your Name" />
-                        </div>
-                        <div class="flex flex-col">
-                            <label for="email">Your Name</label>
-                            <input type="email" name="email" id="email" placeholder="Your Email" />
-                        </div>
+                    <div class="flex gap-6">
+                        <x-layouts::front.form-field label="Phone" name="phone" type="text" placeholder="Your Phone" />
+                        <x-layouts::front.form-field label="Select a solution" name="services" type="select" placeholder="Select a solution">
+                            <option value="">Select Services</option>
+                            <option value="web_design">Web Design</option>
+                            <option value="mobile_app">Mobile App Development</option>
+                            <option value="ui_ux">UI/UX Design</option>
+                            <option value="branding">Branding</option>
+                            <option value="digital_marketing">Digital Marketing</option>
+                        </x-layouts::front.form-field>
                     </div>
-
-                    <div class="flex">
-                        <div class="flex flex-col">
-                            <label for="name">Your Name</label>
-                            <textarea  name="name" id="name" placeholder="Your Name" ></textarea>
-                        </div>
-                        <div class="flex">
-                            <button class="btn btn-primary">Submit</button>
-                        </div>
-                        </div>
+                    <div class="flex gap-6 flex-end">
+                        <x-layouts::front.form-field label="Message" name="message" type="textarea" placeholder="Your Message" />
+                        <button type="submit" class="bg-primary-500 text-white">Submit</button>
+                    </div>
                 </form>
 
 
+                {{-- Socialmedia icons and contact address --}}
+                <div class="mt-20 space-y-5">
+                    <div class="flex items-center gap-x-5">
+                        <a href="#"><img src="{{ asset('frontend/images/socialmedia/dribble.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ asset('frontend/images/socialmedia/behance.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ asset('frontend/images/socialmedia/instagram.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ asset('frontend/images/socialmedia/linkedin.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ asset('frontend/images/socialmedia/x.png') }}" alt=""></a>
+                        <a href="#"><img src="{{ asset('frontend/images/socialmedia/facebook.png') }}" alt=""></a>
+                    </div>
+
+                    <p class=" max-w-[290px]">4th apt, 1st floor, Hedayat darwish plaza, Karte char, Mukhaberat street, Kabul.</p>
+
+                </div>
+
+
             </div>
-            <div class="col">
-                <img src="{{ asset('frontend/images/contact/contact.jpg') }}" alt="">
+            <div class="w-1/2 max-w-[750px] flex justify-end">
+                <img src="{{ asset('frontend/images/contact/contact.jpg') }}" class="w-full h-auto" alt="">
             </div>
         </div>
 

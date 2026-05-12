@@ -267,6 +267,30 @@
     }
 }
 
+/* Contact us page */
+.contact_us {
+    margin-top: 153px;
+
+    form {
+        input,
+        textarea,
+        select {
+            padding: 10px 0;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
+        }
+       
+        button {
+            /* Group 1171274767 */
+            width: 125.92px;
+            height: 50px;
+            margin-top: 95px;
+            border-radius: 50px;
+        }
+    }
+}
+
 /* Footer style */
 footer {
     /* background: url("../../public/frontend/images/Layer_1.svg") top left no-repeat; */

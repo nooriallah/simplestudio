@@ -17,7 +17,6 @@
 
 <body>
     {{-- Header of website --}}
-    {{-- @include('layouts.front.header') --}}
     <x-layouts::front.header />
 
 
@@ -26,7 +25,6 @@
     </main>
 
     {{-- Footer of website --}}
-    {{-- @include('layouts.front.footer') --}}
     <x-layouts::front.footer />
     
 

@@ -47,7 +47,7 @@
 
 
                     {{-- Socila media links   --}}
-                    <div class="social_media mt-[100px] flex items-center align-middle gap-10">
+                    <div class="social_media relative z-10 mt-[100px] flex items-center align-middle gap-10">
                         <a href="#"><img src="{{ asset('frontend/images/socialmedia/dribble.png') }}"
                                 alt="Dribble"></a>
                         <a href="#"><img src="{{ asset('frontend/images/socialmedia/behance.png') }}"
