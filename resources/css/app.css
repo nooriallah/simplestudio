@@ -1,8 +1,6 @@
 /* resources/css/app.css */
 @import url("utilities.css");
 
-
-
 .hero__container {
     min-height: 80vh;
     display: flex;
@@ -162,57 +160,111 @@
             rgba(245, 245, 247, 0) 100%
         );
     }
-    
 
     .why_simple {
-
         .why_card {
             border-bottom: 1px solid gray;
             padding-bottom: 32px;
             margin-bottom: 40px;
             cursor: pointer;
-            
+
             .desc_portion {
                 height: 0;
                 overflow: hidden;
                 transition: all 0.3s ease-in-out;
-                
             }
-            
+
             &:hover .desc_portion {
                 height: 45px;
             }
-            
+
             svg {
                 transition: all 0.3s ease-in-out;
             }
             &:hover svg {
-                transform: rotate(-180deg); 
+                transform: rotate(-180deg);
             }
 
             &:hover svg path {
-                fill: #F5F5F7;
+                fill: #f5f5f7;
             }
-
         }
     }
-
 
     /* testimonials */
     .testimonials {
-
         .cards_wrapper {
+            display: flex;
+            gap: 8px;
 
             .card {
-                max-width: 194px;
+                width: 194px;
+                height: 340px;
+                transition: all 0.3s ease;
+                cursor: pointer;
 
-               
-                
+                .top_info {
+                    display: block;
+                }
+
+                .quote {
+                    display: none;
+                }
+
+                /* First card expanded by default */
+                &:first-child {
+                    width: 843px;
+
+                    .top_info {
+                        display: flex;
+                    }
+
+                    .quote {
+                        display: block;
+                    }
+                }
+            }
+
+            /* Hover effect - collapse first when hovering others */
+            &:hover .card:first-child {
+                width: 194px;
+
+                .top_info {
+                    display: block;
+                }
+
+                .quote {
+                    display: none;
+                }
+            }
+
+            /* Expand hovered card */
+            .card:hover {
+                width: 843px;
+
+                .top_info {
+                    display: flex;
+                }
+
+                .quote {
+                    display: block;
+                }
+            }
+
+            /* Keep first expanded if hovering over it */
+            .card:first-child:hover {
+                width: 843px;
+
+                .top_info {
+                    display: flex;
+                }
+
+                .quote {
+                    display: block;
+                }
             }
         }
     }
-
-   
 }
 
 /* Footer style */

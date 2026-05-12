@@ -36,6 +36,37 @@ class About extends Component
             'desc' => "Led by experienced co-founders with master\'s degrees and 8+ years of experience in design and visual communication."
         ]
     ];
+
+
+    public $testimonials = [
+        [
+            // "image" => public_path("frontend/images/about/client1.jpg"),
+            "name" => "Matiullah Rahmati",
+            "position" => "Founder / CEO, Tamveel",
+            "comment" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
+        ],
+        [
+            // "image" => public_path("frontend/images/about/client1.jpg"),
+            "name" => "Matiullah Rahmati",
+            "position" => "Founder / CEO, Tamveel",
+            "comment" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
+        ],
+        [
+            // "image" => public_path("frontend/images/about/client1.jpg"),
+            "name" => "Matiullah Rahmati",
+            "position" => "Founder / CEO, Tamveel",
+            "comment" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
+        ],
+        [
+            // "image" => public_path("frontend/images/about/client1.jpg"),
+            "name" => "Matiullah Rahmati",
+            "position" => "Founder / CEO, Tamveel",
+            "comment" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
+        ]
+    ];
+
+    
+
     public function render()
     {
         return view('livewire.frontend.about');
