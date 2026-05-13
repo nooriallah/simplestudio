@@ -28,7 +28,7 @@
 
             .project_hidden_info {
                 position: absolute;
-                bottom: -60px;
+                bottom: -100px;
                 left: 50px;
                 transition: bottom 0.5s ease-in-out;
 
@@ -48,14 +48,14 @@
         }
 
         .small__project {
-            flex-basis: 30%;
-            background: url("../../public/frontend/images/projects/smallpic.png")
+            flex-basis: 28%;
+            background: 
                 no-repeat center/cover;
         }
 
         .big__project {
-            flex-basis: 70%;
-            background: url("../../public/frontend/images/projects/bigpic.png")
+            flex-basis: 68%;
+            background: 
                 no-repeat center/cover;
         }
     }
@@ -142,9 +142,55 @@
             }
         }
     }
+
+    .project_card_wrapper {
+        margin-bottom: 77px;
+    }
 }
-.project_card_wrapper {
-    margin-bottom: 77px;
+
+/* Services page */
+.services_page {
+    .service_card {
+        height: auto;
+        margin-bottom: 20px;
+        transition: all 0.3s ease-in-out;
+        height: 130px;
+        cursor: pointer;
+        
+        .service_desc,
+        .service_features,
+        .service_link, 
+        .service_image {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .service_image {
+            height: 0;
+            height: auto;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .right_side svg {
+            display: block;
+        }
+        
+        &.expanded {
+            height: 800px;
+            .service_desc,
+            .service_features,
+            .service_link,
+             .service_image {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .right_side svg {
+                display: none;
+            }
+        }
+    }
 }
 
 /* About page style */
@@ -280,7 +326,7 @@
             border-bottom: 1px solid gray;
             outline: none;
         }
-       
+
         button {
             /* Group 1171274767 */
             width: 125.92px;

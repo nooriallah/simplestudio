@@ -69,6 +69,13 @@
     .button {
         @apply px-[36px] py-[14px] bg-secondary-default text-white rounded-[62px] hover:bg-secondary-700 transition content-center flex-row gap-3;
     }
+    .button:has(svg) {
+        @apply flex items-center;
+
+        &:hover svg path {
+            @apply fill-white;
+        }
+    }
     .content-center {
         @apply flex flex-col items-center text-center;
     }
