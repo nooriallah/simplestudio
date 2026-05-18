@@ -25,22 +25,22 @@ class Projects extends Component
             'size' => 'big__project',
             'backgroundimage' => 'bigpic.png'
         ],
-        // [
-        //     'title' => 'Project 3',
-        //     'description' => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        //     'image' => 'project3',
-        //     'slug' => 'project-3',
-        //     'size' => 'small__project',
-        //     'backgroundimage' => 'smallpic.png'
-        // ],
-        // [
-        //     'title' => 'Project 4',
-        //     'description' => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        //     'image' => 'project4',
-        //     'slug' => 'project-4',
-        //     'size' => 'big__project',
-        //     'backgroundimage' => 'bigpic.png'
-        // ],
+        [
+            'title' => 'Project 3',
+            'description' => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            'image' => 'project3',
+            'slug' => 'project-3',
+            'size' => 'small__project',
+            'backgroundimage' => 'smallpic.png'
+        ],
+        [
+            'title' => 'Project 4',
+            'description' => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            'image' => 'project4',
+            'slug' => 'project-4',
+            'size' => 'big__project',
+            'backgroundimage' => 'bigpic.png'
+        ],
     ];
 
 // making a function to show the single project page 

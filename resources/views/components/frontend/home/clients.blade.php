@@ -16,13 +16,9 @@
             <p class="text-p1 tet-black max-w-[612px] mt-[15px] mb-[28px]">From concept to completion, we craft
                 memorable visuals that transform business identities.</p>
 
-            <a href="#" class="button bg-primary-default text-secondary-default hover:bg-primary-700">Get To Know
-                Us <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M10.2039 4.91091L6.65191 1.35887C6.50386 1.21082 6.42815 1.02474 6.42476 0.800624C6.42138 0.576684 6.49709 0.387218 6.65191 0.232223C6.80672 0.0774073 6.9945 -7.52383e-07 7.21523 -7.24128e-07C7.43579 -6.95895e-07 7.62347 0.0774074 7.77829 0.232224L12.5823 5.03624C12.7756 5.22954 12.8723 5.455 12.8723 5.71261C12.8723 5.97022 12.7756 6.19567 12.5823 6.38897L7.77829 11.193C7.63042 11.3409 7.44443 11.4166 7.22031 11.4201C6.99619 11.4235 6.80672 11.3478 6.65191 11.193C6.49709 11.038 6.41968 10.8502 6.41968 10.6297C6.41968 10.4091 6.49709 10.2213 6.65191 10.0663L10.2039 6.5143L0.801677 6.5143C0.574174 6.5143 0.383637 6.43751 0.230068 6.28395C0.0766773 6.13055 -1.71661e-05 5.94011 -1.71661e-05 5.7126C-1.71661e-05 5.4851 0.0766773 5.29465 0.230068 5.14126C0.383637 4.98769 0.574174 4.91091 0.801677 4.91091L10.2039 4.91091Z"
-                        fill="#090D17" />
-                </svg>
+            <a href="#" class="button font-medium bg-primary-default text-secondary-default hover:bg-primary-700">
+                Get To Know Us 
+                <x-icons.arrow-right />
             </a>
         </div>
 

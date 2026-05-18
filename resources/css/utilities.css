@@ -3,38 +3,37 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
 /* local font-satoshi = 'Satoshi', sans-serif; */
 @font-face {
-    font-family: 'Guton';
-    src: url('/public/frontend/font/Guton-Bold.otf') format('truetype');
+    font-family: "Guton";
+    src: url("/public/frontend/font/Guton-Bold.otf") format("truetype");
     font-weight: 700;
 }
 @font-face {
-    font-family: 'Guton';
-    src: url('/public/frontend/font/Guton-ExtraBold.otf') format('truetype');
+    font-family: "Guton";
+    src: url("/public/frontend/font/Guton-ExtraBold.otf") format("truetype");
     font-weight: 900;
 }
 
 @font-face {
-    font-family: 'Guton';
-    src: url('/public/frontend/font/Guton-Medium.otf') format('truetype');
+    font-family: "Guton";
+    src: url("/public/frontend/font/Guton-Medium.otf") format("truetype");
     font-weight: 500;
 }
 @font-face {
     font-family: "Guton";
-    src: url('/public/frontend/font/Guton-Regular.ttf') format('truetype');
+    src: url("/public/frontend/font/Guton-Regular.ttf") format("truetype");
     font-weight: 400;
 }
 @font-face {
     font-family: "Guton";
-    src: url('/public/frontend/font/Guton-SemiBold.otf') format('truetype');
+    src: url("/public/frontend/font/Guton-SemiBold.otf") format("truetype");
     font-weight: 600;
 }
 
 @layer base {
     html {
-        font-family: 'Satoshi', sans-serif;
+        font-family: "Satoshi", sans-serif;
     }
 }
 
@@ -53,7 +52,7 @@
     h4,
     h5,
     h6 {
-        @apply font-guton;
+        @apply font-guton !important;
     }
 
     a {
@@ -61,38 +60,77 @@
     }
 }
 
+
 @layer components {
     .container {
         margin-left: auto;
         margin-right: auto;
     }
     .button {
-        @apply px-[36px] py-[14px] bg-secondary-default text-white rounded-[62px] hover:bg-secondary-700 transition content-center flex-row gap-3;
+        @apply px-[36px] py-[14px] bg-secondary-default text-white rounded-[62px] font-medium hover:bg-secondary-700 transition content-center flex-row gap-3;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+        z-index: 1;
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #0000002a;
+            transition: all 0.3s;
+            border-radius: 10rem;
+            z-index: -1;
+        }
+        &:hover {
+            color: #fff;
+            &:before {
+                width: 100%;
+            }
+        }
     }
-    .button:has(svg) {
-        @apply flex items-center;
+
+    .button.button-light {
+        @apply bg-white text-secondary-500;
+    }
+
+    .button:has(svg), a[class^="link-"]:has(svg) {
+        @apply flex items-center font-guton;
 
         &:hover svg path {
             @apply fill-white;
         }
     }
+
     .content-center {
         @apply flex flex-col items-center text-center;
     }
     .menu-link {
         @apply text-secondary-500 font-medium text-link-2 transition;
     }
+
+    .btn-glass {
+        background: linear-gradient(
+            90deg,
+            rgba(245, 245, 245, 0.4) 0%,
+            rgba(245, 245, 245, 0.6) 50%,
+            rgba(245, 245, 245, 0.2) 100%
+        );
+        border-radius: 130px;
+    }
 }
 
 /* In your app.css */
 footer.dark {
-    --footer-bg: #141E33;
+    --footer-bg: #141e33;
     --footer-text: white;
     --footer-border: white;
 }
 
 footer.light {
     --footer-bg: white;
-    --footer-text: #141E33;
-    --footer-border: #E5E7EB;
+    --footer-text: #141e33;
+    --footer-border: #e5e7eb;
 }

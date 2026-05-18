@@ -71,6 +71,9 @@ export default {
                     900: "#7F1D1D",
                     default: "#EF4444",
                 },
+                light: {
+                    50: "#ffffff",
+                },
             },
 
             fontFamily: {
@@ -81,7 +84,7 @@ export default {
 
             fontSize: {
                 // Headings
-                display: ["64px", { lineHeight: "89px", fontWeight: "800" }], // Extra Bold
+                display: ["64px", { lineHeight: "74px", fontWeight: "800" }], // Extra Bold
                 h1: ["48px", { lineHeight: "67px", fontWeight: "700" }], // Bold
                 h2: ["36px", { lineHeight: "50px", fontWeight: "700" }], // Bold
                 h3: ["28px", { lineHeight: "39px", fontWeight: "500" }], // medium
@@ -98,8 +101,6 @@ export default {
                 "link-2": ["20px", { lineHeight: "27px", fontWeight: "400" }], // Normal
                 "link-3": ["16px", { lineHeight: "22px", fontWeight: "400" }], // Normal
             },
-
-
         },
     },
     plugins: [],

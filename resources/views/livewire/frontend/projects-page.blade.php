@@ -6,6 +6,7 @@
             we make your ideas live.</h1>
 
             <div class="filter_buttons flex items-center justify-center">
+                <button class="text-h5" id="all">All</button>
                 <button class="text-h5" id="uiux">UI/UX</button>
                 <button class="text-h5" id="branding">Branding</button>
                 <button class="text-h5" id="marketing">Digital Marketing</button>

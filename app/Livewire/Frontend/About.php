@@ -65,8 +65,6 @@ class About extends Component
         ]
     ];
 
-    
-
     public function render()
     {
         return view('livewire.frontend.about');

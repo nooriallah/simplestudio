@@ -84,7 +84,8 @@ class Services extends Component
 
     public function setActiveTab(string $tab)
     {
-        $this->activeTab === $tab ? $this->activeTab = null  : $this->activeTab = $tab; // Set the new active tab
+        // $this->activeTab === $tab ? $this->activeTab = null  : $this->activeTab = $tab; // Set the new active tab
+        $this->activeTab = $tab;
     }
     public function render()
     {
