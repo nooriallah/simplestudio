@@ -71,7 +71,8 @@
             <ul>
 
                 @foreach ($features as $index => $feature)
-                <li class="why_card" :class="{'active': openIndex === {{ $index }}}" @click="openIndex = openIndex === {{ $index }} ? 0 : {{ $index }}">
+                <li class="why_card" :class="{'active': openIndex === {{ $index }}}" 
+                @click="openIndex = openIndex === {{ $index }} ? 0 : {{ $index }}">
                     <div class="title_portion flex items-center justify-between">
                         <span class="text-h3 mb-3">{{ $feature['title'] }}</span>
                         <x-icons.circle-icon />

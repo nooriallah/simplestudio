@@ -1,4 +1,4 @@
- <div class="service_card flex justify-between gap-[212px] bg-white p-12 rounded-2xl mb-8 {{ $activeTab === $key ? 'expanded' : '' }}" 
+ <div class="service_card flex justify-between gap-[212px] bg-white p-12 rounded-2xl mb-8 {{ $activeTab === $key ? 'expanded' : '' }}"
  wire:click="setActiveTab('{{ $key }}')">
 
      {{-- Left side --}}
