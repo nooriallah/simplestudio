@@ -151,41 +151,23 @@
 /* Service section homepage */
 .services {
     .services_wrapper {
-        &:hover .single_service:nth-child(3) {
-            width: 180px;
-
-            .cover_overlay {
-                display: block;
-            }
-        }
-        /* // When ANY child is hovered, force the 3rd child to shrink */
-        &:has(.single_service:hover) {
-            .single_service:nth-child(3) {
-                width: 180px;
-                .cover_overlay {
-                    display: block;
-                }
-            }
-        }
-
         .single_service {
             width: 180px;
             height: 680px;
-            transition: all linear 0.3s;
+            transition: width 0.45s ease, transform 0.45s ease;
 
-            /* // Default state for the 3rd child */
-            &:nth-child(3) {
-                width: 600px;
-                .cover_overlay {
-                    display: none;
-                }
+            .cover_overlay {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity 0.35s ease, visibility 0.35s ease;
             }
 
-            /* // Hover state for any child */
-            &:hover {
-                width: 600px !important; /*  // Forces it to expand */
+            &.is-active {
+                width: 600px;
+
                 .cover_overlay {
-                    display: none !important;
+                    opacity: 0;
+                    visibility: hidden;
                 }
             }
         }
@@ -200,14 +182,13 @@
 
             .single_service {
                 width: auto;
-                height: auto;
                 height: 400px;
-                transition: all ease 0.3s;
+                transition: height 0.35s ease;
                 position: relative;
 
                 .cover_overlay {
                     opacity: 0;
-                    transition: opacity 0.3s ease;
+                    visibility: hidden;
                 }
             }
         }

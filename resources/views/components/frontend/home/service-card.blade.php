@@ -3,7 +3,8 @@
 <div
     class="single_service 
 relative flex flex-col justify-center items-center 
-p-7 rounded-3xl overflow-hidden cursor-pointer bg-tertiary-50">
+p-7 rounded-3xl overflow-hidden cursor-pointer bg-tertiary-50 {{ $loop->iteration === 3 ? 'is-active' : '' }}"
+    data-service-card>
 
     {{-- Cover hover --}}
     <div class="cover_overlay bg-tertiary-50 absolute z-10 w-full h-full"></div>
