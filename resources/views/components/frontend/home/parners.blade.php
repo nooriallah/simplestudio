@@ -1,10 +1,30 @@
-<div class="clients__logos flex justify-between items-center gap-10 mt-[83px] mb-[100px]">
-    <a href="#"><img src="{{ asset('frontend/images/clients/clients1.png') }}" width="auto"
-            alt="Client Logo 1"></a>
-    <a href="#"><img src="{{ asset('frontend/images/clients/clients2.png') }}" alt="Client Logo 2"></a>
-    <a href="#"><img src="{{ asset('frontend/images/clients/clients3.png') }}" width="auto"
-            class="w-auto" alt="Client Logo 3"></a>
-    <a href="#"><img src="{{ asset('frontend/images/clients/clients4.png') }}" alt="Client Logo 4"></a>
-    <a href="#"><img src="{{ asset('frontend/images/clients/clients2.png') }}" alt="Client Logo 5"></a>
-    <a href="#"><img src="{{ asset('frontend/images/clients/clients3.png') }}" alt="Client Logo 5"></a>
+@php
+    $clientLogos = [
+        ['image' => 'clients1.png', 'alt' => 'Client Logo 1'],
+        ['image' => 'clients2.png', 'alt' => 'Client Logo 2'],
+        ['image' => 'clients3.png', 'alt' => 'Client Logo 3'],
+        ['image' => 'clients4.png', 'alt' => 'Client Logo 4'],
+        ['image' => 'clients2.png', 'alt' => 'Client Logo 5'],
+        ['image' => 'clients3.png', 'alt' => 'Client Logo 6'],
+    ];
+@endphp
+
+<div class="clients__logos mt-[83px] mb-[100px]" aria-label="Trusted client logos">
+    <div class="clients__logos_track">
+        <div class="clients__logos_group">
+            @foreach ($clientLogos as $logo)
+                <a href="#" class="client_logo">
+                    <img src="{{ asset('frontend/images/clients/' . $logo['image']) }}" alt="{{ $logo['alt'] }}">
+                </a>
+            @endforeach
+        </div>
+
+        <div class="clients__logos_group" aria-hidden="true">
+            @foreach ($clientLogos as $logo)
+                <a href="#" class="client_logo" tabindex="-1">
+                    <img src="{{ asset('frontend/images/clients/' . $logo['image']) }}" alt="">
+                </a>
+            @endforeach
+        </div>
+    </div>
 </div>

@@ -11,7 +11,7 @@ class PhpTest extends TestCase
      */
     public function test_it_can_render(): void
     {
-        $contents = $this->view('clients.blade.php', [
+        $contents = $this->view('components.frontend.home.clients', [
             //
         ]);
 

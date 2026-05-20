@@ -1,7 +1,7 @@
 @php
 $isDarkPage = request()->routeIs("projects") || request()->routeIs("about");
 @endphp
-<footer class="relative {{ $isDarkPage ? 'bg-secondary-500 text-secondary-50' : 'bg-white text-secondary-500' }}">
+<footer class="relative overflow-hidden {{ $isDarkPage ? 'bg-secondary-500 text-secondary-50' : 'bg-white text-secondary-500' }}">
 
     <img src="{{ asset('frontend/images/Layer_1.svg') }}" class="absolute top-0 left-0 z-10 {{ $isDarkPage ? 'opacity-50 ' : '' }}" />
     <div class="container-fluid pb-[100px] pt-[83px]">

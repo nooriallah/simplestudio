@@ -14,16 +14,21 @@
         {{-- Projects --}}
         <div class="project__container flex flex-col gap-8">
 
-            @for ($i = 0; $i < count($projects); $i +=2) <div class="project__wrapper flex gap-8">
-                {{-- First item (small) --}}
-                <x-frontend.home.project-card project_class="small__project" titled_button="{{ $projects[$i]['title'] }}" small_desc="{{ $projects[$i]['description'] }}" backgroundimage="{{ $projects[$i]['backgroundimage'] }}" slug="{{ $projects[$i]['slug'] }}" />
+            @for ($i = 0; $i < count($projects); $i += 2)
+                @php
+                    $isReversedRow = ($i / 2) % 2 === 1;
+                    $firstProjectClass = $isReversedRow ? 'big__project' : 'small__project';
+                    $secondProjectClass = $isReversedRow ? 'small__project' : 'big__project';
+                @endphp
 
-                {{-- Second item (big) - only if exists --}}
-                @if (isset($projects[$i + 1]))
-                <x-frontend.home.project-card project_class="big__project" titled_button="{{ $projects[$i + 1]['title'] }}" small_desc="{{ $projects[$i + 1]['description'] }}" backgroundimage="{{ $projects[$i + 1]['backgroundimage'] }}" slug="{{ $projects[$i + 1]['slug'] }}" />
-                @endif
-        </div>
-        @endfor
+                <div class="project__wrapper flex gap-8">
+                    <x-frontend.home.project-card project_class="{{ $firstProjectClass }}" titled_button="{{ $projects[$i]['title'] }}" small_desc="{{ $projects[$i]['description'] }}" backgroundimage="{{ $projects[$i]['backgroundimage'] }}" slug="{{ $projects[$i]['slug'] }}" />
+
+                    @if (isset($projects[$i + 1]))
+                        <x-frontend.home.project-card project_class="{{ $secondProjectClass }}" titled_button="{{ $projects[$i + 1]['title'] }}" small_desc="{{ $projects[$i + 1]['description'] }}" backgroundimage="{{ $projects[$i + 1]['backgroundimage'] }}" slug="{{ $projects[$i + 1]['slug'] }}" />
+                    @endif
+                </div>
+            @endfor
 
     </div>
 
