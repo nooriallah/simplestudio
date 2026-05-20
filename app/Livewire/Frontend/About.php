@@ -40,28 +40,28 @@ class About extends Component
 
     public $testimonials = [
         [
-            // "image" => public_path("frontend/images/about/client1.jpg"),
+            "image" => "clientpic.png",
             "name" => "Matiullah Rahmati",
-            "position" => "Founder / CEO, Tamveel",
-            "comment" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
+            "position" => "CEO, Tamveel",
+            "quote" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
         ],
         [
-            // "image" => public_path("frontend/images/about/client1.jpg"),
+            "image" => "client1.jpg",
             "name" => "Matiullah Rahmati",
-            "position" => "Founder / CEO, Tamveel",
-            "comment" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
+            "position" => "CEO, Tamveel",
+            "quote" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
         ],
         [
-            // "image" => public_path("frontend/images/about/client1.jpg"),
+             "image" => "clientpic.png",
             "name" => "Matiullah Rahmati",
-            "position" => "Founder / CEO, Tamveel",
-            "comment" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
+            "position" => "CEO, Tamveel",
+            "quote" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
         ],
         [
-            // "image" => public_path("frontend/images/about/client1.jpg"),
+             "image" => "clientpic.png",
             "name" => "Matiullah Rahmati",
-            "position" => "Founder / CEO, Tamveel",
-            "comment" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
+            "position" => "CEO, Tamveel",
+            "quote" => "Simple functioned as part of our team, helping to crystalize our vision and delivering incredible results in a record time."
         ]
     ];
 

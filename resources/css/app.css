@@ -313,72 +313,140 @@
     .testimonials {
         .cards_wrapper {
             display: flex;
-            gap: 8px;
+            gap: 24px;
 
             .card {
                 width: 194px;
-                height: 340px;
-                transition: all 0.3s ease;
+                height: 341px;
+                border: 1px solid #d7dbe3;
+                border-radius: 14px;
+                transition: width 0.45s ease, transform 0.45s ease;
                 cursor: pointer;
 
                 .top_info {
-                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    height: auto;
+                    text-align: center;
+                    margin-bottom: 0;
+                    position: relative;
+                    z-index: 10;
+                }
+
+                .top_info img {
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 999px;
+                    object-fit: cover;
+                    flex: 0 0 auto;
+                }
+
+                .testimonial_name,
+                .testimonial_position {
+                    color: #141e33;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                .testimonial_name {
+                    margin-top: 10px;
+                }
+
+                .testimonial_position {
+                    font-style: italic;
                 }
 
                 .quote {
                     display: none;
+                    max-width: 520px;
+                    position: relative;
+                    z-index: 10;
                 }
 
-                /* First card expanded by default */
-                &:first-child {
+                .quote p {
+                    color: #141e33;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+
+                .overlay_pic {
+                    /* display: block;
+                    opacity: 0.36;
+                    right: -34px;
+                    top: 0;
+                    bottom: auto;
+                    width: 130px;
+                    height: auto;
+                    pointer-events: none; */
+                }
+
+                .testimonial_action {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 22px;
+                    z-index: 20;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid #d1d5db;
+                    border-radius: 999px;
+                    background: #ffffff;
+                    transform: translateX(-50%);
+                }
+
+                .testimonial_number {
+                    display: none;
+                    color: #141e33;
+                    font-size: 16px;
+                    line-height: 1;
+                }
+
+                .testimonial_arrow {
+                    display: block;
+                }
+
+                &.is-active {
                     width: 843px;
 
                     .top_info {
-                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        text-align: left;
+                        margin-bottom: 34px;
+                    }
+
+                    .testimonial_name {
+                        margin-top: 0;
                     }
 
                     .quote {
                         display: block;
                     }
-                }
-            }
 
-            /* Hover effect - collapse first when hovering others */
-            &:hover .card:first-child {
-                width: 194px;
+                    .overlay_pic {
+                        width: 280px;
+                        right: -16px;
+                        top: 26px;
+                    }
 
-                .top_info {
-                    display: block;
-                }
+                    .testimonial_action {
+                        left: auto;
+                        right: 22px;
+                        bottom: 22px;
+                        transform: none;
+                    }
 
-                .quote {
-                    display: none;
-                }
-            }
+                    .testimonial_number {
+                        display: block;
+                    }
 
-            /* Expand hovered card */
-            .card:hover {
-                width: 843px;
-
-                .top_info {
-                    display: flex;
-                }
-
-                .quote {
-                    display: block;
-                }
-            }
-
-            /* Keep first expanded if hovering over it */
-            .card:first-child:hover {
-                width: 843px;
-
-                .top_info {
-                    display: flex;
-                }
-
-                .quote {
-                    display: block;
+                    .testimonial_arrow {
+                        display: none;
+                    }
                 }
             }
         }

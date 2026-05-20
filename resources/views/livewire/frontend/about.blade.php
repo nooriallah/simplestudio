@@ -105,87 +105,15 @@
             <div class="cards_wrapper flex gap-8">
 
                 @foreach ($testimonials as $testimonial)
-
-
-
-                {{-- single card --}}
-                <div class="card bg-tertiary-50 p-8 rounded-2xl relative overflow-hidden">
-                    <div class="top_info gap-3 mb-10">
-                        <img src="{{ asset('frontend/images/about/clientpic.png') }}" alt="">
-                        <p class="text-p3">Matiullah Rahmaty <br> CEO, Tamveel</p>
-                    </div>
-
-                    <div class="quote relative z-10">
-                        <p class="text-[32px]/10 text-secondary-500">“Simple functioned as part of our team, helping to
-                            crystalize our vision and
-                            delivering incredible results in a record time.”</p>
-                    </div>
-
-                    <svg class="absolute bottom-3 right-3 z-10" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="24.7508" cy="24.7508" r="24.1883" fill="white" stroke="#D1D5DB" stroke-width="1.12504" />
-                        <path d="M24.8856 18.915H21.6005V17.4525H26.4382V33.563H24.8856V18.915Z" fill="black" />
-                    </svg>
-
-
-
-                    <img src="{{ asset('frontend/images/about/testipic.svg') }}" alt="" class="overlay_pic absolute right-0 bottom-0">
-
-                </div>
+                <x-frontend.about.testimonial
+                image="{{ $testimonial['image'] }}"
+                name="{{ $testimonial['name'] }}"
+                position="{{ $testimonial['position'] }}"
+                quote="{{ $testimonial['quote'] }}"
+                :active="$loop->first"
+                />
 
                 @endforeach
-
-
-                {{-- single card --}}
-                <div class="card bg-tertiary-50 p-8 rounded-2xl relative overflow-hidden">
-                    <div class="top_info gap-3 mb-10">
-                        <img src="{{ asset('frontend/images/about/clientpic.png') }}" alt="">
-                        <p class="text-p4">Matiullah Rahmaty <br> CEO, Tamveel</p>
-                    </div>
-
-                    <div class="quote">
-                        <p class="text-p1 text-secondary-500">“Simple functioned as part of our team, helping to
-                            crystalize our vision and
-                            delivering incredible results in a record time.”</p>
-                    </div>
-
-                    <svg class="absolute bottom-3 right-3" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="24.7508" cy="24.7508" r="24.1883" fill="white" stroke="#D1D5DB" stroke-width="1.12504" />
-                        <path d="M24.8856 18.915H21.6005V17.4525H26.4382V33.563H24.8856V18.915Z" fill="black" />
-                    </svg>
-
-
-
-                    <img src="{{ asset('frontend/images/about/testipic.svg') }}" alt="" class="overlay_pic absolute right-0 bottom-0">
-
-                </div>
-
-
-                {{-- single card --}}
-                <div class="card bg-tertiary-50 p-8 rounded-2xl relative overflow-hidden">
-                    <div class="top_info gap-3 mb-10">
-                        <img src="{{ asset('frontend/images/about/clientpic.png') }}" alt="">
-                        <p class="text-p4">Matiullah Rahmaty <br> CEO, Tamveel</p>
-                    </div>
-
-                    <div class="quote">
-                        <p class="text-p1 text-secondary-500">“Simple functioned as part of our team, helping to
-                            crystalize our vision and
-                            delivering incredible results in a record time.”</p>
-                    </div>
-
-                    <svg class="absolute bottom-3 right-3" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="24.7508" cy="24.7508" r="24.1883" fill="white" stroke="#D1D5DB" stroke-width="1.12504" />
-                        <path d="M24.8856 18.915H21.6005V17.4525H26.4382V33.563H24.8856V18.915Z" fill="black" />
-                    </svg>
-
-
-
-                    <img src="{{ asset('frontend/images/about/testipic.svg') }}" alt="" class="overlay_pic absolute right-0 bottom-0">
-
-                </div>
-
-
-
             </div>
 
         </div>
