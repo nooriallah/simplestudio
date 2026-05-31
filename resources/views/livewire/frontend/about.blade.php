@@ -67,16 +67,12 @@
         <div class="container">
 
             <h2 class="text-h2 text-white mb-12">Why Simple</h2>
-
             <ul>
-
                 @foreach ($features as $index => $feature)
-                <li class="why_card" :class="{'active': openIndex === {{ $index }}}" 
-                @click="openIndex = openIndex === {{ $index }} ? 0 : {{ $index }}">
+                <li class="why_card" :class="{'active': openIndex === {{ $index }}}" @click="openIndex = openIndex === {{ $index }} ? 0 : {{ $index }}">
                     <div class="title_portion flex items-center justify-between">
                         <span class="text-h3 mb-3">{{ $feature['title'] }}</span>
                         <x-icons.circle-icon />
-
                     </div>
                     <div class="desc_portion">
                         <p class="max-w-[520px] text-white">{{ $feature['desc'] }}</p>
@@ -84,8 +80,6 @@
 
                 </li>
                 @endforeach
-
-
             </ul>
 
 
@@ -105,13 +99,7 @@
             <div class="cards_wrapper flex gap-8">
 
                 @foreach ($testimonials as $testimonial)
-                <x-frontend.about.testimonial
-                image="{{ $testimonial['image'] }}"
-                name="{{ $testimonial['name'] }}"
-                position="{{ $testimonial['position'] }}"
-                quote="{{ $testimonial['quote'] }}"
-                :active="$loop->first"
-                />
+                <x-frontend.about.testimonial image="{{ $testimonial['image'] }}" name="{{ $testimonial['name'] }}" position="{{ $testimonial['position'] }}" quote="{{ $testimonial['quote'] }}" :active="$loop->first" />
 
                 @endforeach
             </div>

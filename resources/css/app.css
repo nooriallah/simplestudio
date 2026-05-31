@@ -349,7 +349,7 @@
                 .testimonial_name,
                 .testimonial_position {
                     color: #141e33;
-                    font-size: 14px;
+                    font-size: 16px;
                     line-height: 20px;
                 }
 
@@ -363,26 +363,15 @@
 
                 .quote {
                     display: none;
-                    max-width: 520px;
+                    max-width: 635px;
                     position: relative;
                     z-index: 10;
                 }
 
                 .quote p {
                     color: #141e33;
-                    font-size: 24px;
-                    line-height: 32px;
-                }
-
-                .overlay_pic {
-                    /* display: block;
-                    opacity: 0.36;
-                    right: -34px;
-                    top: 0;
-                    bottom: auto;
-                    width: 130px;
-                    height: auto;
-                    pointer-events: none; */
+                    font-size: 31.5px;
+                    line-height: 40px;
                 }
 
                 .testimonial_action {
@@ -428,13 +417,7 @@
 
                     .quote {
                         display: block;
-                    }
-
-                    .overlay_pic {
-                        width: 280px;
-                        right: -16px;
-                        top: 26px;
-                    }
+                                           }
 
                     .testimonial_action {
                         left: auto;
