@@ -38,8 +38,7 @@
 
     @if(Route::is("home"))
     <div class="read_more_button_container flex justify-center items-center mt-[73px]">
-        <a href="#" class="button button-light">More Case
-            Studies <x-icons.arrow-right variant="dark" /></a>
+        <x-button href="/projects" bg_color="bg-white">More casestudies</x-button>
     </div>
     @endif
 

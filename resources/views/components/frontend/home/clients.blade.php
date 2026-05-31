@@ -16,10 +16,7 @@
             <p class="text-p1 tet-black max-w-[612px] mt-[15px] mb-[28px]">From concept to completion, we craft
                 memorable visuals that transform business identities.</p>
 
-            <a href="#" class="button font-medium bg-primary-default text-secondary-default hover:bg-primary-700">
-                Get To Know Us 
-                <x-icons.arrow-right />
-            </a>
+            <x-button href="/contact">Get To Know Us </x-button>
         </div>
 
 

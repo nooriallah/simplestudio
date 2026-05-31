@@ -102,7 +102,7 @@
 
 /* Projects section design */
 .project__container {
-    .project__wrapper {             
+    .project__wrapper {
         flex-direction: row;
 
         .small__project,
@@ -136,14 +136,12 @@
 
         .small__project {
             flex-basis: 30%;
-            background: 
-                no-repeat center/cover;
+            background: no-repeat center/cover;
         }
 
         .big__project {
             flex-basis: 70%;
-            background: 
-                no-repeat center/cover;
+            background: no-repeat center/cover;
         }
     }
 }
@@ -154,12 +152,16 @@
         .single_service {
             width: 180px;
             height: 680px;
-            transition: width 0.45s ease, transform 0.45s ease;
+            transition:
+                width 0.45s ease,
+                transform 0.45s ease;
 
             .cover_overlay {
                 opacity: 1;
                 visibility: visible;
-                transition: opacity 0.35s ease, visibility 0.35s ease;
+                transition:
+                    opacity 0.35s ease,
+                    visibility 0.35s ease;
             }
 
             &.is-active {
@@ -210,7 +212,6 @@
             }
             &#all {
                 background-color: #f5f5f7;
-
             }
         }
     }
@@ -228,36 +229,36 @@
         transition: all 0.3s ease-in-out;
         height: 130px;
         cursor: pointer;
-        
+
         .service_desc,
         .service_features,
-        .service_link, 
+        .service_link,
         .service_image {
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease-in-out;
         }
-        
+
         .service_image {
             height: 0;
             height: auto;
             transition: all 0.3s ease-in-out;
         }
-        
+
         .right_side svg {
             display: block;
         }
-        
+
         &.expanded {
             height: 800px;
             .service_desc,
             .service_features,
             .service_link,
-             .service_image {
+            .service_image {
                 opacity: 1;
                 visibility: visible;
             }
-            
+
             .right_side svg {
                 display: none;
             }
@@ -320,7 +321,9 @@
                 height: 341px;
                 border: 1px solid #d7dbe3;
                 border-radius: 14px;
-                transition: width 0.45s ease, transform 0.45s ease;
+                transition:
+                    width 0.45s ease,
+                    transform 0.45s ease;
                 cursor: pointer;
 
                 .top_info {

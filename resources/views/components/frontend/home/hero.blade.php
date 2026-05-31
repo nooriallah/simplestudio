@@ -1,4 +1,3 @@
-
 <div class="hero__wrapper container-fluid">
 
     <div class="hero__container container mx-auto content-center text-white rounded-[24px] gap-4">
@@ -7,15 +6,11 @@
         <h3 class="text-h3 text-white max-w-[425px]">A creative, and purpose-driven design studio</h3>
 
         <div class="content-center flex-row gap-[30px]">
-            <a href="#"
-                class="button font-guton font-medium bg-primary-default text-secondary-default hover:bg-primary-700">
-                Let's Talk
-                <x-icons.arrow-right />
-                
-            </a>
-            <a href="#" class="link-2 font-guton font-medium text-white gap-3">Learn More
-                <x-icons.arrow-right variant="light" />
-            </a>
+
+            <x-button href="/contact">Let's Talk</x-button>
+
+            <x-button bg_color="transparent" href="/about" text_color="text-white" icon_color="light">Learn more</x-button>
+
         </div>
     </div>
 </div>

@@ -74,6 +74,14 @@ export default {
                 light: {
                     50: "#ffffff",
                 },
+                liquid: {
+                    50: `linear-gradient(
+                        90deg,
+                        rgba(245, 245, 245, 0.4) 0%,
+                        rgba(245, 245, 245, 0.6) 50%,
+                        rgba(245, 245, 245, 0.2) 100%
+                    );`,
+                },
             },
 
             fontFamily: {

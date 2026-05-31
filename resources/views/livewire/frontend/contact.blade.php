@@ -41,7 +41,7 @@
                     </div>
                     <div class="flex gap-6 flex-end">
                         <x-layouts::front.form-field label="Message" name="message" type="textarea" placeholder="Your Message" />
-                        <button type="submit" class="bg-primary-500 text-white">Submit</button>
+                        <x-button type="submit" class="text-white">Submit</x-button>
                     </div>
                 </form>
 

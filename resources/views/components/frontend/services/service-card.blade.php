@@ -1,5 +1,4 @@
- <div class="service_card flex justify-between gap-[212px] bg-white p-12 rounded-2xl mb-8 {{ $activeTab === $key ? 'expanded' : '' }}"
- wire:click="setActiveTab('{{ $key }}')">
+ <div class="service_card flex justify-between gap-[212px] bg-white p-12 rounded-2xl mb-8 {{ $activeTab === $key ? 'expanded' : '' }}" wire:click="setActiveTab('{{ $key }}')">
 
      {{-- Left side --}}
      <div class="left_side flex-1 fl ex justify-center flex-col">
@@ -12,14 +11,11 @@
 
          <ul class="service_features text-p1 font-guton flex flex-col gap-4 mt-8">
              @foreach ($service['features'] as $feature)
-             <li >{{ $feature }}</li>
+             <li>{{ $feature }}</li>
              @endforeach
          </ul>
-
-         <a href="{{ route('project.show', ['slug' => $service['slug']]) }}" class=" service_link button bg-primary-500 text-secondary-500 hover:text-white mt-10 w-fit">
-             Case Studies
-             <x-icons.arrow-right />
-         </a>
+         
+         <x-button href="{{ route('project.show', ['slug' => $service['slug']]) }}" class="service_link mt-10 w-fit">Case Studies</x-button>
      </div>
 
      {{-- Right side --}}
