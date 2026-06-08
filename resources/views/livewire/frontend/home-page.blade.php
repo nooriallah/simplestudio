@@ -3,7 +3,7 @@
 
 
     {{-- Hero section --}}
-    @include('components.frontend.home.hero')
+    @include('components.frontend.home.hero') 
 
     {{-- Clients section  --}}
     @include('components.frontend.home.clients')

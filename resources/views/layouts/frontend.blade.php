@@ -9,7 +9,6 @@
     {{-- Fonts --}}
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
 
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @livewireStyles
@@ -26,7 +25,7 @@
 
     {{-- Footer of website --}}
     <x-layouts::front.footer />
-    
+
 
     @livewireScripts
 </body>
