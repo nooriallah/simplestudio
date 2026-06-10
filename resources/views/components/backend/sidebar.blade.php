@@ -18,14 +18,14 @@
             </li>
 
             <li>
-                <a href="javascript:viod()" >
+                <a href="javascript:viod()">
                     <i class="fas fa-home"></i>
-                    <span>Home</span>
+                    <span>Setting</span>
                 </a>
             </li>
 
             <li>
-                <a href="/setting" >
+                <a href="{{ route('setting') }}">
                     <i class="fa fa-cog"></i>
                     <span>Setting</span>
                 </a>

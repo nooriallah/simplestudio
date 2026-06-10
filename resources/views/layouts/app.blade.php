@@ -25,6 +25,9 @@
     <!-- Style css -->
     <link href="/backend/css/style.css" rel="stylesheet">
 
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
+
 </head>
 
 <body>
@@ -94,8 +97,8 @@
             <!-- row -->
             <div class="container-fluid">
                 <div class="row">
-					
-					{{ $slot }}
+
+                    {{ $slot }}
 
                 </div>
             </div>
@@ -123,6 +126,9 @@
     <script src="/backend/js/dlabnav-init.js"></script>
     <script src="/backend/js/demo.js"></script>
     <script src="/backend/js/styleSwitcher.js"></script>
+
+    {{-- Livewire scripts  --}}
+    @livewireScripts
 </body>
 
 </html>

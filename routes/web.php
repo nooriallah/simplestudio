@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Backend\Dashboard;
+use App\Livewire\Backend\Setting;
 use App\Livewire\Frontend\About;
 use App\Livewire\Frontend\Contact;
 use App\Livewire\Frontend\HomePage;
@@ -18,3 +19,5 @@ Route::get("/contact", Contact::class)->name("contact");
 
 
 Route::get("/simple/dashboard", Dashboard::class)->name("dashboard");
+Route::get("/simple/settings", Setting::class)->name("setting");
+
