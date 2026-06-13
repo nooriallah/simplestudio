@@ -1,5 +1,6 @@
 <?php
 
+use App\UserRole;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('role', ['admin', 'editor', 'subscriber'])->default('subscriber');
+            $table->enum('role', array_column(UserRole::cases(), 'value'))->default(UserRole::SUBSCRIBER->value);
             $table->boolean('is_active')->default(true);
             $table->string('profile_picture')->nullable();
             $table->rememberToken();

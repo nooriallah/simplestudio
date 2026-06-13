@@ -14,7 +14,7 @@
     <div class="container mx-auto mt-11">
         <div class="services_wrapper flex justify-center items-center gap-7">
 
-            <x-frontend.home.service-card :services="$services" />
+            <x-frontend.home.homeservice-card :services="$services" />
 
         </div>
     </div>

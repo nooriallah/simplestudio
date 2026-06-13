@@ -26,6 +26,7 @@
     <link href="/backend/css/style.css" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     @livewireStyles
 
 </head>
@@ -68,11 +69,10 @@
                 </div>
             </div>
         </div>
+
         <!--**********************************
             Nav header end
         ***********************************-->
-
-
 
         <!--**********************************
             Header start
@@ -81,7 +81,6 @@
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
-
 
 
         <!--**********************************
@@ -109,6 +108,14 @@
 
     </div>
     {{-- Main end --}}
+
+
+    {{-- Success message for 3 second --}}
+    @if (session()->has('success'))
+    <div x-data="{show: true}" x-init="setTimeout(() => show = false, 3000)" x-show="show" x-transition.opacity.duration.500ms class="alert alert-success position-fixed bottom-0 end-0 m-3 z-50">
+        {{ session('success') }}
+    </div>
+    @endif
 
     <!--**********************************
         Scripts

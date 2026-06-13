@@ -31,6 +31,17 @@
                 </a>
             </li>
 
+
+            <li>
+                <a class="has-arrow " href="javascript:void()" aria-expanded="false">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-text">Users</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{ route('users') }}">User List</a></li>
+                </ul>
+            </li>
+
         </ul>
 
     </div>
